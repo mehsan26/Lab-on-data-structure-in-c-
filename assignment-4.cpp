@@ -1,4 +1,4 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
 class Node {
@@ -14,15 +14,14 @@ public:
     LinkedList() {
         head = NULL;
     }
-
     void createNode(int value) {
         Node* newNode = new Node();
         newNode->data = value;
         newNode->next = NULL;
-
         if (head == NULL) {
             head = newNode;
-        } else {
+        } 
+        else {
             Node* current = head;
             while (current->next != NULL) {
                 current = current->next;
@@ -80,7 +79,12 @@ int main() {
     myList.createNode(3);
     myList.createNode(4);
     myList.createNode(5);
-
+    myList.createNode(5);
+    myList.createNode(5);
+    myList.createNode(5);
+    myList.createNode(5);
+    myList.createNode(5);
+    
     myList.displayList(); // 1 2 3 4 5
 
     myList.removeNode(3);
@@ -89,8 +93,7 @@ int main() {
     myList.removeNode(1);
     myList.displayList(); // 2 4 5
 
-    myList.removeNode(4); // Invalid position
-    myList.displayList(); // 2 4 5
+    
 
     return 0;
 }
